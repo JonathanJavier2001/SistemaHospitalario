@@ -1,0 +1,182 @@
+# Per https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates
+version: 2
+updates:
+
+- package-ecosystem: github-actions
+  directory: /
+  schedule:
+    interval: weekly
+
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+  ignore:
+  - dependency-name: org.slf4j*
+    versions: [">= 0"]
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/almalinux/8.5"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/almalinux/8.6"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/alpine/3.16.0"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/amzn/2"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/amzn/2022"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/debian/11"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/debian/testing"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/debian/unstable"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/registry.access.redhat.com/ubi8/ubi/8.4"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/registry.access.redhat.com/ubi8/ubi/8.5"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/registry.access.redhat.com/ubi8/ubi/8.6"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/ubuntu/20.04"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+  ignore:
+    - dependency-name: "Dockerfile"
+      versions: [">= 21.0.0"]
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/ubuntu/21.10"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
+  ignore:
+    - dependency-name: "Dockerfile"
+      versions: [">= 22.0.0"]
+
+- package-ecosystem: docker
+  directory: "src/test/resources/org/jvnet/hudson/plugins/platformlabeler/ubuntu/22.04"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 2
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - skip-changelog
